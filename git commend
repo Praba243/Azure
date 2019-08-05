@@ -1,0 +1,21 @@
+git init
+
+git config –global user.name “Prabakaran.p”
+git config –global user.email “praba243@outlook.com”
+
+git status (too check any untrack & uncommitted changes)
+
+git add.(track all changes for commit)
+
+git commit  -m “ ” (to add changes in local git)
+
+git remote add origin https://mctprabak..@azure.com...
+
+git push -u origin --all
+
+git branch
+
+git branch <newbranchname>
+
+https://pastebin.com/EYXssE46
+git checkout <newbranch>
