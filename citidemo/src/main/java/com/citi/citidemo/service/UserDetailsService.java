@@ -13,18 +13,19 @@ import com.citi.citidemo.repository.UserDetailsRepository;
 public class UserDetailsService {
 
 	@Autowired
-	UserDetailsRepository userdetailRepo;
+	UserDetailsRepository userDetailsRepository;
 	
 	public List<Userdetails> getAllUser(){
-		return userdetailRepo.findAll();
+		return (List<Userdetails>) userDetailsRepository.findAll();
 	}
 	
 	public void save(Userdetails userdetail){
-		userdetailRepo.save(userdetail);
+		System.out.println("inside service for save");
+		userDetailsRepository.save(userdetail);
 	}
 	
 	public Userdetails getUserById(Integer id){
 		
-		return userdetailRepo.findById(id).get();
+		return userDetailsRepository.findById(id).get();
 	}
 }
