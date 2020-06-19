@@ -31,7 +31,10 @@ public class UserDetailController {
 	public List<Userdetails> getFilteredUser(@RequestBody Userdetails userdetail){
 		System.out.println("inside userDetails controller");
 		List<Userdetails> allUsers=userdetailService.getAllUser();
-		List<Userdetails> filteredUsers=allUsers.stream().filter(user -> user.getId()==userdetail.getId() || user.getAge() ==userdetail.getAge()).collect(Collectors.toList());
+		List<Userdetails> filteredUsers=allUsers.stream().filter(user -> user.getId()==userdetail.getId() ||
+				user.getAge() ==userdetail.getAge() || user.getFirstname()== userdetail.getFirstname() || 
+				user.getLastname()==userdetail.getLastname() ||
+				user.getGender()==userdetail.getGender()).collect(Collectors.toList());
 		System.out.println(filteredUsers);
 		return filteredUsers;
 	}
